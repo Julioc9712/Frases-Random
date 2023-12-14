@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frases Random</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  </head>
+  <body id="quote-box">
+    <header>
+      <nav class="navbar navbar-dark bg-dark position-fixed top-0 w-100">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="https://portafolioreactjulioc97.netlify.app"
+            target="_blank"
+          >
+            <img
+              class="logo"
+              src="logo.png"
+              style="border-radius: 50%"
+              width="50px"
+              height="50px"
+            />
+          </a>
+          <p class="container_efecto"><span class="efecto"></span></p>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <h1 class="titulo text-center">"Generador de frases motivacionales"</h1>
+    </section>
+    <div class="contenedor__frases">
+      <div class="fraseComilla">
+        <span class="fs-4"><i class="bi bi-quote"></i></span>
+        <p class="frase" id="text"></p>
+      </div>
+      <p class="autor text-end fst-italic" id="author"></p>
+      <div class="button_redes">
+        <div class="button">
+          <button class="btn btn-primary" id="new-quote">Siguiente</button>
+        </div>
+        <div class="redes">
+          <a href="https://twitter.com/juliocmr97" target="_blank">
+            <i class="bi bi-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/julio-cesar-mesa-ruíz-490438282/"
+            target="_blank"
+            id="tweet-quote"
+            ><i class="bi bi-linkedin"></i></a
+          ><a href="https://github.com/Julioc9712" target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="https://www.freecodecamp.org/JulioC97" target="_blank">
+            <i class="fab fa-free-code-camp"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <section class="d-flex justify-content-center">
+      <p>
+        Copyright:
+        <em class="text-decoration-underline text-secondary"
+          ><a href="https://portafolioreactjulioc97.netlify.app" target="_blank"
+            >juliocmr97@gmail.com</a
+          ></em
+        >
+      </p>
+    </section>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

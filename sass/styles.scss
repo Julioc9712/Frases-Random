@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kalnia:wght@500&family=Righteous&family=Roboto:wght@100&display=swap");
+
+@mixin flexbox($justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Righteous";
+}
+body {
+  background-image: linear-gradient(to bottom, #93a5cf 0%, #e4efe9 100%);
+  min-height: 85vh;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 5px cyan);
+}
+.titulo {
+  margin-top: 10rem;
+  color: white;
+  text-shadow: rgb(0, 106, 255) 1px 1px;
+}
+.contenedor__frases {
+  padding: 2rem;
+  margin: 5rem auto 2rem auto;
+  border-radius: 10px;
+  width: 50%;
+  background-color: white;
+  border: 1px solid rgb(207, 207, 207);
+  filter: drop-shadow(0 0 5px cyan);
+
+  .fraseComilla {
+    @include flexbox(center, none);
+
+    .frase {
+      width: 100%;
+      @include flexbox(flex-start, center);
+      font-size: 25px;
+    }
+  }
+
+  .autor {
+    font-size: 20px;
+  }
+
+  button {
+    &:hover {
+      filter: drop-shadow(0 0 2px cyan);
+    }
+  }
+}
+.button_redes {
+  @include flexbox(space-between, center);
+  margin-top: 2rem;
+
+  .redes {
+    @include flexbox(center, center);
+    gap: 10px;
+    font-size: 30px;
+  }
+}
+.container_efecto {
+  margin-top: 15px;
+
+  .efecto {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contenedor__frases {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contenedor__frases {
+    width: 90%;
+  }
+  .container_efecto {
+    .efecto {
+      font-size: 15px;
+    }
+  }
+  .contenedor__frases {
+    .fraseComilla {
+      .frase {
+        font-size: 20px;
+      }
+    }
+    .autor {
+      font-size: 18px;
+    }
+  }
+}
